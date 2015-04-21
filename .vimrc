@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" run :PluginInstall to install plugin via Vundle
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -74,7 +75,12 @@ set autochdir
 "set statusline+=%{rvm#statusline()} 
 
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-set guifont=Monaco:h14
+" if Linux
+set guifont=DejaVu\ Sans\ Mono\ 12
+" if MacOSX
+"set guifont=Monaco:h14
+" if Windows
+"set guifont=DejaVu_Sans_Mono:h12
 
 " let NERDTree load CWD automaticly
 let g:NERDTreeChDirMode=2
@@ -93,4 +99,3 @@ map	<D-0> :bn<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-
